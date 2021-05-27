@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+html{
+    margin: none;
+    border: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    font-family:'Anton', sans-serif;
+    font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li{
+    float: left;
 }
 
-.App-link {
-  color: #61dafb;
+a{
+    display: block;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5)3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li a{
+    display:block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
+
+li a:hover{
+    color: #f0e130;
+}
+
+.videoTag{
+    right: 0;
+    left: 0;
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    bottom: 50%;
+    color: #f1f1f1;
+    width: 50%;
+    transform: translate(50%, 50%);
+    font-family:'Anton', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+/*----------------Profile card----------------*/
+.first-section{
+    margin-top: 150px;
+}
+.profile-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+}
+.profile-pic{
+    width: 100%;
+}
+p{
+    font-size: 20px;
+    padding: 30px;
+}
+
+/*------------------3d Cube----------------------*/
+.wrap{
+    margin-top: 250px;
+    margin-bottom: 100px;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+.cube{
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+}
+
+.cube img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.cube img:nth-child(1){
+    transform: rotateY(0deg) translateZ(100px);
+}
+.cube img:nth-child(2){
+    transform: rotateY(90deg) translateZ(100px);
+}
+.cube img:nth-child(3){
+    transform: rotateY(180deg) translateZ(100px);
+}
+.cube img:nth-child(4){
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.cube img:nth-child(5){
+    transform: rotateX(90deg) translateZ(100px);
+}
+.cube img:nth-child(6){
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes loop{
+    from{transform:rotateX(0deg) rotateY(0deg);}
+    to{transform:rotateX(360deg) rotateY(360deg);}
+}
+.cube{
+    animation: loop 10s linear infinite;
+}
+/*---------------------------------------------------------*/
+
+.second-section{
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+}
+
+.third-section{
+    width: 100%;
+}
+
+.link{
+    margin: auto;
+    max-width: fit-content;
+}   
+
+.link img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+.link img:hover{
+    background-color: #f0e130;
+}
+
