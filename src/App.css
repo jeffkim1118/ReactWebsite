@@ -1,10 +1,13 @@
 html{
     margin: none;
     border: none;
+    scroll-behavior: smooth;
+    height: 100%;
 }
 
 body{
     margin: 0;
+    height: 100%;
 }
 
 ul{
@@ -43,9 +46,8 @@ li a:hover{
 }
 
 .videoTag{
-    right: 0;
-    left: 0;
     position: relative;
+    z-index: -1;
 }
 
 .content{
@@ -58,8 +60,42 @@ li a:hover{
     font-size: 40px;
     letter-spacing: 1px;
 }
+
+@media only screen and (max-width:1170px){
+    .content{
+        position: absolute;
+        bottom: 50%;
+        color: #f1f1f1;
+        width: 50%;
+        transform: translate(50%, 50%);
+        font-family:'Anton', sans-serif;
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .videoTag{
+        background:url('./img/spaceship.jpg');
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+}
+@media(min-aspect-ratio: 16/9){
+    .videoTag{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9){
+    .videoTag{
+        width: 100%;
+        height: auto;
+    }
+}
 /*----------------Profile card----------------*/
-.first-section{
+#first-section{
     margin-top: 150px;
 }
 .profile-card{
@@ -149,9 +185,54 @@ p{
     width: 80px;
     height: 80px;
     border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .link img:hover{
-    background-color: #f0e130;
+    background-color: #d1d1d1;
 }
 
+
+#fourth-section{
+    max-width: 300px;
+    margin: auto;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+}
+
+#parallax{
+    background-image: url('./img/background2.jpg');
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    #parallax {
+      background-attachment: scroll;
+    }
+  }
+
+.resume{
+    max-width: 300px;
+    margin: auto;
+}
+
+.resume-link{
+    text-decoration: none;
+    background-color: #f0e130;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: black;
+}
+.resume-link:hover{
+    background-color: #eee68e;
+}
+
+@media only screen and (max-width: 400px){
+
+}

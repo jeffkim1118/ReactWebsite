@@ -1,4 +1,6 @@
+import React from 'react';
 import './App.css';
+import pdf from './My Resume.pdf';
 import background from './background.mp4';
 import kingotter from './img/kingotter.jpg'
 import react from './img/react.png';
@@ -9,16 +11,17 @@ import phplogo from './img/php-logo.png';
 import mysql from './img/mysql.png';
 import github from './img/github.png';
 import linkedin from './img/linkedinicon.png';
+import ContactUs from './components/Contact.js';
 
 function App() {
   return (
     <div className="App">
       <div className="header">
           <ul className="nav-menu">
-            <li><a>Home</a></li>
-            <li><a>About Me</a></li>
-            <li><a>Resume</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#first-section">About Me</a></li>
+            <li><a href="#parallax">Resume</a></li>
+            <li><a href="#fifth-section">Contact</a></li>
           </ul>
       </div>
       <div className="background">
@@ -32,7 +35,7 @@ function App() {
         <h1>This is my website!</h1>
       </div>
       
-      <div className="first-section">
+      <div id="first-section">
         <div className="profile-card">
             <img src={kingotter} className="profile-pic" alt="profile-img"/>
             <h1>Hi, I'm Yoonsung Kim!</h1>
@@ -42,7 +45,7 @@ function App() {
               as hobbies. I also love eating good foods like pizza and pasta!
             </p>
         </div>
-
+      </div>
         <div className="wrap">
           <div className="cube">
             <img src={react} className="react-icon" alt="react-logo"/>
@@ -53,6 +56,7 @@ function App() {
             <img src={mysql} className="mysql-icon" alt="mysql-logo"/>
           </div>
         </div>
+
         <div className="second-section">
             <h2>Check Out My Favorite Tools!</h2>
             <p>I enjoy using HTML5, CSS3, and JavaScript for Front-end. I use PHP and MySQL for Back-end and database management!
@@ -62,18 +66,25 @@ function App() {
         
         <div className="third-section">
           <div className="link">
-            <a href="https://github.com/jeffkim1118" target="_blank"><img src={github} className="github-icon" alt="github-logo"/></a>
-            <a href="https://www.linkedin.com/in/yoonsung-kim-639b30178/" target="_blank"><img src={linkedin} className="linkedin-icon" alt="linkedin-logo"/></a>
+            <a href="https://github.com/jeffkim1118" target="_blank" rel="noreferrer"><img src={github} className="github-icon" alt="github-logo"/></a>
+            <a href="https://www.linkedin.com/in/yoonsung-kim-639b30178/" target="_blank" rel="noreferrer"><img src={linkedin} className="linkedin-icon" alt="linkedin-logo"/></a>
+          </div>
+        </div><br/><br/>
+
+        <div id="parallax"></div>
+
+        <div id="fourth-section">
+          <div className="resume">
+              <h1>Here's My Resume!</h1>
+              <a href={pdf} className="resume-link" target="_blank">RESUME</a>
           </div>
         </div>
 
-        <div className="fourth-section">
-          <div className="resume">
-              <h1>Here's My Resume!</h1>
-              
+        <div id="fifth-section">
+          <div className="contact-form-container">
+            <ContactUs />
           </div>
         </div>
-      </div>
     </div>
   );
 }
