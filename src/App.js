@@ -2,16 +2,8 @@ import React from 'react';
 import './App.css';
 import pdf from './My Resume.pdf';
 import background from './background.mp4';
-import kingotter from './img/kingotter.jpg'
-import react from './img/react.png';
-import htmllogo from './img/htmllogo.png';
-import csslogo from './img/css.png';
-import jslogo from './img/jslogo.png';
-import phplogo from './img/php-logo.png';
-import mysql from './img/mysql.png';
-import github from './img/github.png';
-import linkedin from './img/linkedinicon.png';
 import ContactUs from './components/Contact.js';
+import IMAGES from './img/image';
 
 function App() {
   return (
@@ -20,10 +12,11 @@ function App() {
           <ul className="nav-menu">
             <li><a href="#">Home</a></li>
             <li><a href="#first-section">About Me</a></li>
-            <li><a href="#parallax">Resume</a></li>
+            <li><a href="#resume">Resume</a></li>
             <li><a href="#fifth-section">Contact</a></li>
           </ul>
       </div>
+
       <div className="background">
         <video className="videoTag" autoPlay loop muted>
           <source src={background} type="video/mp4"/>
@@ -37,7 +30,7 @@ function App() {
       
       <div id="first-section">
         <div className="profile-card">
-            <img src={kingotter} className="profile-pic" alt="profile-img"/>
+            <img src={ IMAGES.logoOtter} className="profile-pic" alt="profile-img"/>
             <h1>Hi, I'm Yoonsung Kim!</h1>
             <p>Born in Seoul, South Korea and grew up in New York, US. 
               I'm a recent graduate with a Computer Information System (CIS) degree
@@ -48,12 +41,12 @@ function App() {
       </div>
         <div className="wrap">
           <div className="cube">
-            <img src={react} className="react-icon" alt="react-logo"/>
-            <img src={htmllogo} className="html-icon" alt="html-logo"/>
-            <img src={csslogo} className="css-icon" alt="css-logo"/>
-            <img src={jslogo} className="js-icon" alt="js-logo"/>
-            <img src={phplogo} className="php-icon" alt="php-logo"/>
-            <img src={mysql} className="mysql-icon" alt="mysql-logo"/>
+            <img src={ IMAGES.logoReact } className="react-icon" alt="react-logo"/>
+            <img src={ IMAGES.logoHtml } className="html-icon" alt="html-logo"/>
+            <img src={ IMAGES.logoCSS } className="css-icon" alt="css-logo"/>
+            <img src={ IMAGES.logoJS } className="js-icon" alt="js-logo"/>
+            <img src={ IMAGES.logoPHP } className="php-icon" alt="php-logo"/>
+            <img src={ IMAGES.logoMysql } className="mysql-icon" alt="mysql-logo"/>
           </div>
         </div>
 
@@ -66,17 +59,17 @@ function App() {
         
         <div className="third-section">
           <div className="link">
-            <a href="https://github.com/jeffkim1118" target="_blank" rel="noreferrer"><img src={github} className="github-icon" alt="github-logo"/></a>
-            <a href="https://www.linkedin.com/in/yoonsung-kim-639b30178/" target="_blank" rel="noreferrer"><img src={linkedin} className="linkedin-icon" alt="linkedin-logo"/></a>
+            <a href="https://github.com/jeffkim1118" target="_blank" rel="noreferrer"><img src={ IMAGES.logoGithub } className="github-icon" alt="github-logo"/></a>
+            <a href="https://www.linkedin.com/in/yoonsung-kim-639b30178/" target="_blank" rel="noreferrer"><img src={ IMAGES.logoLinkedin } className="linkedin-icon" alt="linkedin-logo"/></a>
           </div>
         </div><br/><br/>
 
         <div id="parallax"></div>
-
+        <div id="resume"></div>
         <div id="fourth-section">
           <div className="resume">
               <h1>Here's My Resume!</h1>
-              <a href={pdf} className="resume-link" target="_blank">RESUME</a>
+              <a href={pdf} className="resume-link" target="_blank" rel="noreferrer">RESUME</a>
           </div>
         </div>
 

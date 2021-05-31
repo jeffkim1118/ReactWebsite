@@ -45,9 +45,14 @@ li a:hover{
     color: #f0e130;
 }
 
+.background{
+    width: 100%;
+    height: auto;
+}
+
 .videoTag{
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 
 .content{
@@ -64,24 +69,33 @@ li a:hover{
 @media only screen and (max-width:1170px){
     .content{
         position: absolute;
-        bottom: 50%;
+        top: -20%;
         color: #f1f1f1;
         width: 50%;
         transform: translate(50%, 50%);
         font-family:'Anton', sans-serif;
         font-size: 20px;
         letter-spacing: 1px;
-        text-align: center;
-    }
-    .videoTag{
-        background:url('./img/spaceship.jpg');
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
     }
 }
+@media only screen and (max-width:600px){
+    .content{
+        position: absolute;
+        top: -30%;
+        color: #f1f1f1;
+        width: 50%;
+        transform: translate(50%, 50%);
+        font-family:'Anton', sans-serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    .videoTag{
+        position: relative;
+        z-index: 0;
+    }
+}
+
+
 @media(min-aspect-ratio: 16/9){
     .videoTag{
         width: 100%;
@@ -98,6 +112,7 @@ li a:hover{
 #first-section{
     margin-top: 150px;
 }
+
 .profile-card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 350px;
@@ -106,9 +121,11 @@ li a:hover{
     font-family: 'Jost', sans-serif;
     font-weight: 600;
 }
+
 .profile-pic{
     width: 100%;
 }
+
 p{
     font-size: 20px;
     padding: 30px;
@@ -231,8 +248,4 @@ p{
 }
 .resume-link:hover{
     background-color: #eee68e;
-}
-
-@media only screen and (max-width: 400px){
-
 }
