@@ -1,4 +1,5 @@
 const IMAGES = {
+    mypic: require('./mypic.jpg').default,
     logoCSS: require('./css.png').default,
     logoReact: require('./react.png').default,
     logoMysql: require('./mysql.png').default,

@@ -6,6 +6,12 @@ html{
     height: 100%;
 }
 
+:root{
+    --bg-color: hsl(49 37% 94%);
+    --typewriterSpeed: 10s;
+    --typewriterCharacters: 24;
+}
+
 body{
     margin: 0;
     height: 100%;

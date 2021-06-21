@@ -3,6 +3,7 @@ import './App.css';
 import pdf from './My Resume.pdf';
 import background from './background.mp4';
 import ContactUs from './components/Contact.js';
+import Projects from './components/Projects.js';
 import IMAGES from './img/image';
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
       
       <div id="first-section">
         <div className="profile-card">
-            <img src={ IMAGES.logoOtter} className="profile-pic" alt="profile-img"/>
+            <img src={ IMAGES.mypic} className="profile-pic" alt="profile-img"/>
             <h1>Hi, I'm Yoonsung Kim!</h1>
             <p>Born in Seoul, South Korea and grew up in New York, US. 
               I'm a recent graduate with a Computer Information System (CIS) degree
@@ -63,6 +64,13 @@ function App() {
             <a href="https://www.linkedin.com/in/yoonsung-kim-639b30178/" target="_blank" rel="noreferrer"><img src={ IMAGES.logoLinkedin } className="linkedin-icon" alt="linkedin-logo"/></a>
           </div>
         </div><br/><br/>
+
+        <div>
+          <div id="projects">
+              <Projects />
+          </div>
+          
+        </div>
 
         <div id="parallax"></div>
         <div id="resume"></div>
