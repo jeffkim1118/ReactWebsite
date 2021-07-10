@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import pdf from './My Resume.pdf';
+import pdf from './YoonsungKim.pdf';
 import background from './background.mp4';
 import ContactUs from './components/Contact.js';
 import Projects from './components/Projects.js';
