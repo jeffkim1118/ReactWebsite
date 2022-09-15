@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <div className="header">
           <ul className="nav-menu">
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#first-section">About Me</a></li>
             <li><a href="#resume">Resume</a></li>
             <li><a href="#fifth-section">Contact</a></li>
@@ -46,14 +46,14 @@ function App() {
             <img src={ IMAGES.logoHtml } className="html-icon" alt="html-logo"/>
             <img src={ IMAGES.logoCSS } className="css-icon" alt="css-logo"/>
             <img src={ IMAGES.logoJS } className="js-icon" alt="js-logo"/>
-            <img src={ IMAGES.logoPHP } className="php-icon" alt="php-logo"/>
+            <img src={ IMAGES.logoRails } className="rails-icon" alt="rails-logo"/>
             <img src={ IMAGES.logoMysql } className="mysql-icon" alt="mysql-logo"/>
           </div>
         </div>
 
         <div className="second-section">
             <h2>Check Out My Favorite Tools!</h2>
-            <p>I enjoy using HTML5, CSS3, and JavaScript for Front-end. I use PHP and MySQL for Back-end and database management!
+            <p>I enjoy using HTML, CSS, and JavaScript for Front-end. I use Ruby and Ruby on Rails for my backend development!
             I use a JavaScript library called React.js to develop websites and web apps. FYI, this website is built on React! You can also
             check out my previous works on github and my linkedin profile.</p>
         </div>

@@ -6,7 +6,8 @@ export default class Projects extends React.Component{
         return(
             <div className='project-container'>
                 <div className='project-section'>
-                    <h1>- Portfolio Section Coming Soon -</h1>
+                    <h1>Check out My Projects</h1>
+                    <a href="https://github.com/jeffkim1118">Go to my Github</a>
                 </div>
             </div>
             
